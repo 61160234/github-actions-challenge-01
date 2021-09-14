@@ -1,7 +1,7 @@
-name: learn-github-actions
+name: run-nodejs
 on: [push]
 jobs:
-  check-bats-version:
+  run-nodejs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -9,5 +9,4 @@ jobs:
         with:
           node-version: '14'
       - run: npm install express
-      - run: bats -v
       - run: node app.js
